@@ -15,8 +15,10 @@ while True:
     print "Connection from: " + str(caddr)
     message = csock.recv(1024)  # get the request, 1kB max
     print 'Message: ', message
-    filename = message.split()[1]
-    print 'Fname:', filename
+    request = message.split() # Main request received from the client
+    request_method = str(request[0])
+    filename = str(request[1])
+
     try:
         f = open(filename[1:])
         outputdata = f.read()
@@ -28,12 +30,19 @@ while True:
             csock.send(outputdata[i])
         csock.close()
     except:
-        csock.send('HTTP/1.0 200 OK\r\n\r\n')
-        f = open('home.html')
-        send_data = f.read()
-        for i in range(0, len(send_data )):
-            csock.send(send_data [i])
-        csock.close()
-
+        if filename == '/':
+            csock.send('HTTP/1.0 200 OK\r\n\r\n')
+            f = open('home.html')
+            send_data = f.read()
+            for i in range(0, len(send_data )):
+                csock.send(send_data[i])
+            csock.close()
+        else:
+            csock.send('HTTP/1.1 404 Not Found\r\n\r\n')
+            f = open('file_not_found.html')
+            send_data = f.read()
+            for i in range(0, len(send_data )):
+                csock.send(send_data [i])
+            csock.close()
 
     csock.close()
