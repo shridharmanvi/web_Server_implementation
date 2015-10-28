@@ -1,6 +1,7 @@
 __author__ = 'shridharmanvi'
 
 import socket
+import thread
 
 host = ''
 port = 8011
@@ -8,11 +9,14 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.bind((host, port))
 sock.listen(1)  # don't queue up any requests
 
-while True:
-    print 'Server running.....\n'
-    csock, caddr = sock.accept()  # Accepts connection
-    #print "Connection from: " + str(caddr)
+
+
+def server_func(csock, caddr):
     message = csock.recv(1024)  # get the request, 1kB max
+    log = open('./server_log', 'a')
+    log.writelines(str(message))
+    log.writelines('\n ------------------ \n')
+    log.close()
     #print 'Message: ', message
     request = message.split() # Main request received from the client
     #print request[-1]
@@ -57,8 +61,15 @@ while True:
     else:
         if request_method == 'POST':
             print message
-            print 'message sent by POST request: \n', request[-1]
+            #print 'message sent by POST request: \n', request[-1]
             csock.close()
 
-
     csock.close()
+
+if __name__ == '__main__':
+    while True:
+        print 'Server running.....\n'
+        csocket, caddress = sock.accept()  # Accepts connection
+        thread.start_new_thread(server_func, (csocket, caddress)) # Start thread for every new request
+
+

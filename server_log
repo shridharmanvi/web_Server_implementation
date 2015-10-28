@@ -1,0 +1,226 @@
+GET /www/ima HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /www/ima HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /www/ima HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET / HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET / HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+    POST /auth HTTP/1.1
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 46
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+userName=shridhar.manvi&password=manvishridhar
+ ------------------ 
+    POST /auth HTTP/1.1
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 46
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+userName=shridhar.manvi&password=manvishridhar
+ ------------------ 
+    POST /auth HTTP/1.1
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 46
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+userName=shridhar.manvi&password=manvishridhar
+ ------------------ 
+    POST /auth HTTP/1.1
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 46
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+userName=shridhar.manvi&password=manvishridhar
+ ------------------ 
+    POST /auth HTTP/1.1
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 46
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+userName=shridhar.manvi&password=manvishridhar
+ ------------------ 
+    POST /auth HTTP/1.1
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 46
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+userName=shridhar.manvi&password=manvishridhar
+ ------------------ 
+GET / HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET / HTTP/1.1
+    Host: :8011
+    Connection: close
+    
+
+ ------------------ 
+    POST /auth HTTP/1.1
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 46
+    Host: :8011
+    Connection: close
+    
+userName=shridhar.manvi&password=manvishridhar
+ ------------------ 
+GET /www/index.html HTTP/1.1
+    Host: :8011
+    Connection: close
+    
+
+ ------------------ 
+GET /www/index.html HTTP/1.1
+    Host: :8011
+    Connection: close
+    
+
+ ------------------ 
+GET /www/index.html HTTP/1.1
+    Host: :8011
+    Connection: close
+    
+
+ ------------------ 
+GET /www/index.html HTTP/1.1
+    Host: :8011
+    Connection: close
+    
+
+ ------------------ 
+GET /www/index.html HTTP/1.1
+    Host: :8011
+    Connection: close
+    
+
+ ------------------ 
+GET /www/index.html HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /www/index.html HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /www/index.html HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET / HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /home.html HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /home.htm HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /home.html HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /home.html HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /home.html HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /home.html HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /home.html HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /home.html HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /home.html HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /home.html HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+GET /home.html HTTP/1.1
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+
+ ------------------ 
+    POST /auth HTTP/1.1
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 22
+    Host: 127.0.0.1:8011
+    Connection: close
+    
+username=shridharmanvi
+ ------------------ 

@@ -4,28 +4,17 @@ import sys
 import re
 import os
 
-host = '127.0.0.1'
-port = 8011
+host = str(sys.argv[1])
+port = int(sys.argv[2])
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((host, port))
 CRLF = "\r\n\r\n"
 
+log = open('client_log', 'a')
+
+
+
 def GET(url):
-    #print url
-    url = urlparse.urlparse(url)
-    path = url.path
-    get_statement = 'GET ' + str(path) + 'HTTP/1.0'
-    print get_statement
-    #s.send("GET / HTTP/1.0%s" % (CRLF))
-    s.send("GET " + get_statement)
-    data = (s.recv(1000000))
-    s.shutdown(1)
-    s.close()
-    print 'Received', repr(data)
-
-
-
-def GET1(url):
     url = urlparse.urlparse(url)
     path = url.path
 
@@ -43,16 +32,13 @@ def GET1(url):
     data_received = (s.recv(1000000))
     s.shutdown(1)
     s.close()
+    log.writelines(data_received)
+    log.writelines('\n --------------------- \n')
     #print 'Received', repr(data_received)
     print data_received
 
 
 def POST(body):
-    #host = '127.0.0.1'
-    #port = 8011
-    #s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    #s.connect((host, port))
-
     headers = """\
     POST /auth HTTP/1.1\r
     Content-Type: {content_type}\r
@@ -72,10 +58,20 @@ def POST(body):
     payload = header_bytes + body_bytes
     s.send(payload)
 
-if __name__ == '__main__':
-    if sys.argv[1] == 'POST':
-        POST('userName=shridhar.manvi&password=manvishridhar')
-    else:
-        if sys.argv[1] == 'GET':
-            GET1('http://127.0.0.1:8010/www/ima')
 
+if __name__ == '__main__':
+    if sys.argv[3] == 'POST':
+        POST(sys.argv[4])
+    else:
+        if sys.argv[3] == 'GET':
+            GET(sys.argv[4])
+
+
+
+"""
+python client.py 127.0.0.1 8011 GET 'http://127.0.0.1:8010/home.html'
+"""
+
+"""
+python client.py 127.0.0.1 8011 POST 'username=shridharmanvi'
+"""
